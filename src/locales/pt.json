@@ -1,0 +1,45 @@
+{
+    "header": {
+      "home": "Início",
+      "about": "Sobre",
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+    "hero": {
+    "greeting": "Olá, eu sou",
+    "description": "Desenvolvo aplicações web escaláveis e interfaces intuitivas, com foco na qualidade do código e boas práticas"
+  },"about": {
+    "introduction": "Introdução",
+    "overview": "Visão Geral",
+    "description": "Sou um engenheiro de software com profundo conhecimento em TypeScript, JavaScript e especialização em frameworks como Angular e Python. Ao longo dos anos, desenvolvi sistemas escaláveis e de fácil manutenção, sempre focado nos princípios de código limpo e otimização de performance. Gosto de trabalhar em ambientes colaborativos e sou apaixonado por criar interfaces intuitivas e soluções de backend robustas para resolver problemas complexos. Vamos trabalhar juntos para transformar suas ideias em aplicações eficientes e escaláveis."
+  },
+  "experience": {
+    "title": "Experiência",
+    "overview": "Minha Experiência Profissional",
+    "job1": {
+      "title": "Desenvolvedor Full Stack",
+      "company": "Softfocus",
+      "date": "Nov 2021 - Presente · 3 anos",
+      "location": "Pato Branco, Paraná, Brasil",
+      "point1": "Participei ativamente de reuniões de alinhamento estratégico e sessões de brainstorming, colaborando de perto com equipes multifuncionais para definir e implementar padrões de Clean Architecture em projetos usando Python e Django REST Framework (DRF).",
+      "point2": "Adquiri extensa experiência trabalhando com Angular 15+, contribuindo para o desenvolvimento de novos recursos e melhorias contínuas nas interfaces web.",
+      "point3": "Desempenhei um papel fundamental em projetos de desenvolvimento mobile, utilizando Flutter para implementar soluções específicas que atendessem às demandas de várias iniciativas.",
+      "point4": "Criei middlewares usando tecnologias como Node.JS e Python (FastAPI), visando otimizar a comunicação do sistema e melhorar a eficiência geral da aplicação."
+    },
+    "job2": {
+      "title": "Desenvolvedor Full Stack",
+      "company": "Habil Software Ltda",
+      "date": "Mai 2021 - Nov 2021 · 7 meses",
+      "point1": "Envolvido no desenvolvimento e refinamento de uma plataforma web projetada como a versão online de um sistema desktop existente. Responsável pelo projeto desde sua fase inicial de desenvolvimento até sua implantação.",
+      "point2": "Utilizei tecnologias como Angular e PrimeNG para a interface web, Electron para a versão desktop, que exigia um banco de dados local, e Spring Framework para a camada de backend. Além disso, desenvolvi um projeto de integração com WhatsApp usando Node.JS e WebSockets, permitindo comunicação em tempo real entre o sistema e o aplicativo de mensagens."
+    },
+    "job3": {
+      "title": "Desenvolvedor Full Stack",
+      "company": "Agende Tecnologias",
+      "date": "Set 2019 - Mai 2021 · 1 ano 9 meses",
+      "point1": "Iniciei minha carreira como desenvolvedor, adquirindo uma sólida compreensão de padrões de design e melhores práticas. Durante esse período, trabalhei principalmente com tecnologias como AngularJS, Python, Node.js e Java Spring, onde fui responsável por desenvolver novos recursos e manter sistemas legados.",
+      "point2": "Além disso, tive a oportunidade de trabalhar com Flutter, gerenciando a manutenção de dois aplicativos diferentes, o que me permitiu expandir minha experiência em desenvolvimento mobile e lidar com uma variedade de desafios técnicos."
+    }
+  }
+}

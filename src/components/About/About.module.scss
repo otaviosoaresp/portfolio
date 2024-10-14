@@ -1,0 +1,45 @@
+.shadowCard {
+  box-shadow: 0px 10px 30px -15px rgba(33, 30, 53, 0.5);
+}
+
+.greenPinkGradient {
+  background: linear-gradient(90deg, rgba(0, 206, 168, 0.2) 0%, rgba(191, 97, 255, 0.2) 100%);
+}
+
+.cardBg {
+  background-color: rgba(29, 24, 54, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.card {
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+
+  @media (min-width: 640px) {
+    width: calc(50% - 20px);
+  }
+
+  @media (min-width: 768px) {
+    width: calc(33.333% - 20px);
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(25% - 20px);
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    .shadowCard {
+      box-shadow: 0px 20px 40px -15px rgba(33, 30, 53, 0.7);
+    }
+  }
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -10px;
+}

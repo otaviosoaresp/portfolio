@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .section-head-text {
+    @apply text-white font-black text-[30px] xs:text-[40px] sm:text-[50px] md:text-[60px];
+  }
+
+  .section-sub-text {
+    @apply text-[14px] sm:text-[18px] text-secondary uppercase tracking-wider;
+  }
+
+  .padding-x {
+    @apply px-6 sm:px-16;
+  }
+
+  .padding-y {
+    @apply py-6 sm:py-16;
+  }
+
+  .padding {
+    @apply px-6 sm:px-16 py-10 sm:py-16;
+  }
+  
+}
+
+html {  
+  scroll-behavior: smooth;
+  width: 100%;
+  
+}
+
+body {
+  background-color: #121212;
+}
+
+h1, p {
+  color: #fff;
+}
+
+
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+

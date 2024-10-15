@@ -3,6 +3,21 @@ import {
     webg,
     fullstack,
     backendg,
+    angular,
+    django,
+    docker,
+    fastapi,
+    firebase,
+    flutter,
+    postgresql,
+    python,
+    tailwind,
+    typescript,
+    git,
+    reactjs,
+    spring,
+    nodejs,
+    css,
     softfocusbr_logo,
     habil_software_logo,
     agende_tecnologias_logo,
@@ -65,4 +80,70 @@ const experiences = [
   },
 ];
 
-export { services, experiences };
+const technologies = [
+  {
+    name: "Angular",
+    icon: angular,
+  },
+  {
+    name: "Django",
+    icon: django,
+  },
+  {
+    name: "Docker",
+    icon: docker,
+  },
+  {
+    name: "FastAPI",
+    icon: fastapi,
+  },
+  {
+    name: "Firebase",
+    icon: firebase,
+  },
+  {
+    name: "Flutter",
+    icon: flutter,
+  },
+  {
+    name: "PostgreSQL",
+    icon: postgresql,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
+    name: "Tailwind",
+    icon: tailwind,
+  },
+  {
+    name: "Typescript",
+    icon: typescript,
+  },
+  {
+    name: "Git",
+    icon: git,
+  },
+  {
+    name: "React",
+    icon: reactjs,
+  },
+  {
+    name: "Spring Boot",
+    icon: spring,
+  },
+  {
+    name: "NodeJS",
+    icon: nodejs,
+  },
+  {
+    name: "CSS",
+    icon: css,
+  },
+  
+];
+
+  
+
+export { services, experiences, technologies };

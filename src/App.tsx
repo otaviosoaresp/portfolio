@@ -8,6 +8,7 @@ import Hero from './components/Hero/Hero'
 import About from './components/About/About'
 import Experience from './components/Experience/Experience';
 import Works from './components/Works/Works';
+import Techlogies from './components/Techlogies/Techlogies';
 
 
 const App: React.FC = () => {
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Hero />
           <About />
           <Experience />
+          <Techlogies />
           <Works />
         </div>
       </BrowserRouter>

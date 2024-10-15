@@ -42,5 +42,9 @@
             "point1": "Started my career as a developer, gaining a solid understanding of design patterns and best practices. During this time, I primarily worked with technologies such as AngularJS, Python, Node.js, and Java Spring, where I was responsible for developing new features and maintaining legacy systems.",
             "point2": "In addition, I had the opportunity to work with Flutter, managing the maintenance of two different applications, which allowed me to expand my mobile development experience and handle a variety of technical challenges."
         }
+    },
+    "works": {
+        "title": "Works",
+        "title2": "Projects"
     }
 }

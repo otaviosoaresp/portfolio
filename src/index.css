@@ -40,6 +40,22 @@ h1, p {
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #606060;
+}
 
 /* reset css */
 * {
@@ -48,4 +64,3 @@ h1, p {
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
-

@@ -45,6 +45,18 @@
     },
     "works": {
         "title": "Works",
-        "title2": "Projects"
+        "title2": "Projects",
+        "project1": {
+            "name": "Daily Draw",
+            "description": "An interactive daily raffle web application with animations, participant management, and secure authentication. Built with React and NestJS, featuring a modern UI, JWT authentication, and PostgreSQL integration."
+        },
+        "project2": {
+            "name": "AlgoQuiz",
+            "description": "A full-stack web app for learning and practicing algorithms through interactive quizzes. It features AI-generated quizzes, algorithm management, and real-time feedback, built with React and FastAPI."
+        },
+        "project3": {
+            "name": "AI-Powered Algorithmic Problem Solver",
+            "description": "A desktop app that uses AI to solve algorithmic problems from screen captures. It integrates OCR for text extraction and a local AI model to generate solutions with syntax-highlighted code and explanations."
+        }
     }
 }

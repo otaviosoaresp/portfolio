@@ -1,15 +1,16 @@
 {
-    "header": {
-      "home": "Início",
-      "about": "Sobre",
-      "experience": "Experiência",
-      "projects": "Projetos",
-      "contact": "Contato"
-    },
-    "hero": {
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "hero": {
     "greeting": "Olá, eu sou",
     "description": "Desenvolvo aplicações web escaláveis e interfaces intuitivas, com foco na qualidade do código e boas práticas"
-  },"about": {
+  },
+  "about": {
     "introduction": "Introdução",
     "overview": "Visão Geral",
     "description": "Sou um engenheiro de software com profundo conhecimento em TypeScript, JavaScript e especialização em frameworks como Angular e Python. Ao longo dos anos, desenvolvi sistemas escaláveis e de fácil manutenção, sempre focado nos princípios de código limpo e otimização de performance. Gosto de trabalhar em ambientes colaborativos e sou apaixonado por criar interfaces intuitivas e soluções de backend robustas para resolver problemas complexos. Vamos trabalhar juntos para transformar suas ideias em aplicações eficientes e escaláveis."
@@ -44,6 +45,18 @@
   },
   "works": {
     "title": "Projetos",
-    "title2": "Portfólio de Trabalhos"
-  } 
+    "title2": "Portfólio de Trabalhos",
+    "project1": {
+      "name": "Sorteador Diário",
+      "description": "Uma aplicação web interativa de sorteio diário com animações, gerenciamento de participantes e autenticação segura. Desenvolvida com React e NestJS, possui uma interface moderna, autenticação JWT e integração com PostgreSQL."
+    },
+    "project2": {
+      "name": "AlgoQuiz",
+      "description": "Uma aplicação web full-stack para aprender e praticar algoritmos através de quizzes interativos. Possui geração de quizzes com IA, gerenciamento de algoritmos e feedback em tempo real, desenvolvida com React e FastAPI."
+    },
+    "project3": {
+      "name": "Solver de Problemas Algorítmicos com IA",
+      "description": "Um aplicativo desktop que usa IA para resolver problemas algorítmicos capturados da tela. Integra OCR para extração de texto e um modelo de IA local para gerar soluções com exibição de código e explicações."
+    }
+  }
 }

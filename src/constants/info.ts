@@ -1,31 +1,9 @@
-import {
-    mobileg,
-    webg,
-    fullstack,
-    backendg,
-    angular,
-    django,
-    docker,
-    fastapi,
-    firebase,
-    flutter,
-    postgresql,
-    python,
-    tailwind,
-    typescript,
-    git,
-    reactjs,
-    spring,
-    nodejs,
-    css,
-    softfocusbr_logo,
-    habil_software_logo,
-    agende_tecnologias_logo,
-  } from "../assets";
+import { agende_tecnologias_logo, angular, backendg, css, django, docker, fastapi, firebase, flutter, fullstack, git, habil_software_logo, leetcode_ai, mobileg, nodejs, postgresql, python, quiz, reactjs, softfocusbr_logo, sorteador, tailwind, typescript, webg, spring } from "../assets";
+
 
 const services = [
     {
-      title: "Full Stack Developer",
+        title: "Full Stack Developer",
       icon: fullstack,
     },
     {
@@ -144,6 +122,93 @@ const technologies = [
   
 ];
 
+const works = [
+  {
+    name: "works.project1.name",
+    description: "works.project1.description",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "red-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "docker",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: sorteador,
+    source_code_link: "https://github.com/otaviosoaresp/sorteador",
+  },
+  {
+    name: "works.project2.name",
+    description: "works.project2.description",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "typescript",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "tailwindcss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "ollama",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: quiz,
+    source_code_link: "https://github.com/otaviosoaresp/alg-quiz-llm",
+  },
+  {
+    name: "works.project3.name",
+    description: "works.project3.description",
+    tags: [
+      {
+        name: "python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "pyqt5",
+        color: "green-text-gradient",
+      },
+      {
+        name: "opencv",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "tesseract",
+        color: "red-text-gradient",
+      },
+      {
+        name: "ollama",
+        color: "purple-text-gradient",
+      },
+    ],
+    image: leetcode_ai,
+    source_code_link: "https://github.com/otaviosoaresp/screen-reader-py",
+  },
+
+]
   
 
-export { services, experiences, technologies };
+export { services, experiences, technologies, works };

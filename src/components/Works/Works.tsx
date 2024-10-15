@@ -1,4 +1,5 @@
-import { motion } from "framer-motion"
+import React, { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import Tilt from 'react-parallax-tilt';
 import { fadeIn } from "../../utils/motion"
 import SectionWrapper from "../../utils/SectionWrapper"
@@ -9,55 +10,81 @@ import styles from "./Works.module.scss"
 
 const ProjectCard: React.FC<{ project: typeof works[0], index: number }> = ({ project, index }) => {
   const { t } = useTranslation()
+  const [isImageOpen, setIsImageOpen] = useState(false)
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        tiltMaxAngleX={15}
-        tiltMaxAngleY={15}
-        scale={1.02}
-        transitionSpeed={450}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={project.image}
-            alt={t(project.name)}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute top-2 right-2">
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => window.open(project.source_code_link, "_blank")}
-              className="bg-black bg-opacity-50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg"
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </motion.div>
+    <>
+      <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+        <Tilt
+          tiltMaxAngleX={15}
+          tiltMaxAngleY={15}
+          scale={1.02}
+          transitionSpeed={450}
+          className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        >
+          <div className="relative w-full h-[230px]">
+            <img
+              src={project.image}
+              alt={t(project.name)}
+              className="w-full h-full object-cover rounded-2xl cursor-pointer"
+              onClick={() => setIsImageOpen(true)}
+            />
+            <div className="absolute top-2 right-2">
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => window.open(project.source_code_link, "_blank")}
+                className="bg-black bg-opacity-50 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer shadow-lg"
+              >
+                <img
+                  src={github}
+                  alt="github"
+                  className="w-1/2 h-1/2 object-contain"
+                />
+              </motion.div>
+            </div>
           </div>
-        </div>
 
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{t(project.name)}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{t(project.description)}</p>
-        </div>
+          <div className="mt-5">
+            <h3 className="text-white font-bold text-[24px]">{t(project.name)}</h3>
+            <p className="mt-2 text-secondary text-[14px]">{t(project.description)}</p>
+          </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.tags?.map((tag) => (
-            <span 
-              key={tag.name} 
-              className={`${styles[tag.color]} px-2 py-1 rounded-full text-[12px] font-semibold`}
-            >
-              {tag.name}
-            </span>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.tags?.map((tag) => (
+              <span 
+                key={tag.name} 
+                className={`${styles[tag.color]} px-2 py-1 rounded-full text-[12px] font-semibold`}
+              >
+                {tag.name}
+              </span>
+            ))}
+          </div>
+        </Tilt>
+      </motion.div>
+
+      <AnimatePresence>
+        {isImageOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsImageOpen(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 cursor-pointer"
+          >
+            <motion.img
+              src={project.image}
+              alt={t(project.name)}
+              className="max-w-[90%] max-h-[90vh] object-contain"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   )
 }
 

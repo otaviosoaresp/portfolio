@@ -2,6 +2,7 @@
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import eye from "./eye.png";
 
 // Service icons
 import webg from "./webg.gif";
@@ -83,6 +84,7 @@ export {
   leetcode_ai,
   quiz,
   sorteador,
+  eye
 };
 
 // Export types

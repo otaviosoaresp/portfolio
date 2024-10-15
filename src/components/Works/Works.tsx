@@ -5,31 +5,47 @@ import { fadeIn } from "../../utils/motion"
 import SectionWrapper from "../../utils/SectionWrapper"
 import { useTranslation } from "react-i18next"
 import { works } from "../../constants/info"
-import { github } from "../../assets"
+import { github, eye } from "../../assets"
 import styles from "./Works.module.scss"
 
 const ProjectCard: React.FC<{ project: typeof works[0], index: number }> = ({ project, index }) => {
   const { t } = useTranslation()
   const [isImageOpen, setIsImageOpen] = useState(false)
 
+  const handleImageClick = () => {
+    setIsImageOpen(true)
+  }
+
   return (
     <>
       <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
         <Tilt
-          tiltMaxAngleX={15}
-          tiltMaxAngleY={15}
+          tiltMaxAngleX={8}
+          tiltMaxAngleY={8}
           scale={1.02}
           transitionSpeed={450}
           className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
         >
-          <div className="relative w-full h-[230px]">
+          <div 
+            className="relative w-full h-[230px] group cursor-pointer"
+            onClick={handleImageClick}
+          >
             <img
               src={project.image}
               alt={t(project.name)}
-              className="w-full h-full object-cover rounded-2xl cursor-pointer"
-              onClick={() => setIsImageOpen(true)}
+              className="w-full h-full object-cover rounded-2xl"
             />
-            <div className="absolute top-2 right-2">
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-2xl">
+              <img
+                src={eye}
+                alt="view"
+                className="w-10 h-10 object-contain"
+              />
+            </div>
+            <div 
+              className="absolute top-2 right-2"
+              onClick={(e) => e.stopPropagation()}
+            >
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}

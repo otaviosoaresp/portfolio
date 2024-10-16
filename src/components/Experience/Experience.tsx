@@ -26,6 +26,9 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
       className={styles.experienceCard}
     >
+      <div className={styles.experienceIconContainer} style={{ backgroundColor: experience.iconBg }}>
+        <img src={experience.icon} alt={t(experience.company_name)} className={styles.experienceIcon} />
+      </div>
       <div className={styles.experienceCardContent}>
         <h3 className={styles.experienceTitle}>{t(experience.title)}</h3>
         <p className={styles.experienceCompany}>{t(experience.company_name)}</p>
@@ -35,9 +38,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience, index }) =>
             <li key={`experience-point-${index}`}>{t(point)}</li>
           ))}
         </ul>
-      </div>
-      <div className={styles.experienceIconContainer} style={{ backgroundColor: experience.iconBg }}>
-        <img src={experience.icon} alt={t(experience.company_name)} className={styles.experienceIcon} />
       </div>
     </motion.div>
   );
@@ -52,7 +52,7 @@ const Experience: React.FC = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
-      className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-0`}
+      className={`${styles.experienceSection} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
     >
       <motion.div>
         <p className={styles.sectionSubText}>{t('experience.title')}</p>

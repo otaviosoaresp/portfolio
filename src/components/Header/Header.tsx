@@ -30,7 +30,10 @@ const Header: React.FC = () => {
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`${styles.headerContent} w-full flex justify-between items-center max-w-7xl mx-auto`}>
-        <h1 className="text-2xl font-bold">Otavio Soares</h1>
+        <a href="#home" className="flex items-center">
+          <img src="/logo.png" alt="Logo" className="w-10 h-10 mr-2" /> {/* Atualize o caminho do logo */}
+          <h1 className="text-2xl font-bold">Otavio Soares</h1>
+        </a>
 
         <nav className={styles.desktopMenu}>
           <ul className="flex space-x-4">

@@ -58,5 +58,16 @@
             "name": "AI-Powered Algorithmic Problem Solver",
             "description": "A desktop app that uses AI to solve algorithmic problems from screen captures. It integrates OCR for text extraction and a local AI model to generate solutions with syntax-highlighted code and explanations."
         }
+    },
+    "contact": {
+        "title": "Get in Touch",
+        "introText": "Feel free to reach out for collaborations or just a friendly chat.",
+        "namePlaceholder": "Your Name",
+        "emailPlaceholder": "Your Email",
+        "messagePlaceholder": "Your Message",
+        "send": "Send",
+        "sending": "Sending...",
+        "successMessage": "Message sent successfully!",
+        "errorMessage": "An error occurred while sending the message. Please try again."
     }
 }

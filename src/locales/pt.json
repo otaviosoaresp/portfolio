@@ -58,5 +58,16 @@
       "name": "Solver de Problemas Algorítmicos com IA",
       "description": "Um aplicativo desktop que usa IA para resolver problemas algorítmicos capturados da tela. Integra OCR para extração de texto e um modelo de IA local para gerar soluções com exibição de código e explicações."
     }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "introText": "Sinta-se à vontade para entrar em contato para colaborações ou apenas um bate-papo amigável.",
+    "namePlaceholder": "Seu Nome",
+    "emailPlaceholder": "Seu E-mail",
+    "messagePlaceholder": "Sua Mensagem",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "successMessage": "Mensagem enviada com sucesso!",
+    "errorMessage": "Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente."
   }
 }

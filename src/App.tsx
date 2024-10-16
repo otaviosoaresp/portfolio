@@ -9,6 +9,7 @@ import About from './components/About/About'
 import Experience from './components/Experience/Experience';
 import Works from './components/Works/Works';
 import Techlogies from './components/Techlogies/Techlogies';
+import Contact from './components/Contact/Contact';
 
 
 const App: React.FC = () => {
@@ -22,6 +23,7 @@ const App: React.FC = () => {
           <Experience />
           <Techlogies />
           <Works />
+          <Contact />
         </div>
       </BrowserRouter>
     </I18nextProvider>

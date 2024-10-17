@@ -15,33 +15,11 @@
 .experienceTimeline {
   @apply mt-10 flex flex-col;
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 20px;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, #915eff 0%, #00cea8 100%);
-  }
 }
 
 .experienceCard {
-  @apply mb-8 ml-12;
+  @apply mb-8;
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: -26px;
-    top: 22px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #915eff;
-    border: 2px solid #1d1836;
-  }
 }
 
 .experienceCardInner {
@@ -54,7 +32,6 @@
   position: absolute;
   right: 12px;
   top: 12px;
-  z-index: 1;
 }
 
 .experienceIcon {
@@ -104,21 +81,6 @@
 
   .experienceTimeline {
     @apply mt-16;
-
-    &::before {
-      left: 28px;
-    }
-  }
-
-  .experienceCard {
-    @apply ml-16;
-
-    &::before {
-      left: -34px;
-      top: 28px;
-      width: 16px;
-      height: 16px;
-    }
   }
 
   .experienceIconContainer {
@@ -153,39 +115,12 @@
 }
 
 @media (min-width: 1024px) {
-  .experienceTimeline {
-    &::before {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
   .experienceCard {
-    @apply ml-0 w-[calc(50%-2rem)];
+    @apply w-[calc(100%-2rem)];
     margin-bottom: 2rem;
-
-    &:nth-child(even) {
-      @apply ml-auto;
-
-      &::before {
-        left: -8px;
-      }
-    }
-
-    &:nth-child(odd) {
-      &::before {
-        left: auto;
-        right: -8px;
-      }
-    }
   }
 
   .experienceCardInner {
     @apply flex-row items-start;
-  }
-
-  .experienceIconContainer {
-    right: 16px;
-    top: 16px;
   }
 }

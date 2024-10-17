@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
 import { useTranslation } from "react-i18next";
 import { experiences } from "../../constants/info";
 import styles from './Experience.module.scss';
@@ -46,28 +44,17 @@ const Experience: React.FC = () => {
 
   return (
     <div className={styles.experienceWrapper}>
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.experienceSection} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
-      >
-        <motion.div variants={textVariant(0.2)}>
+      <section className={`${styles.experienceSection} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}>
+        <div>
           <p className={styles.sectionSubText}>{t('experience.title')}</p>
           <h2 className={styles.sectionHeadText}>{t('experience.overview')}</h2>
-        </motion.div>
-        <motion.div 
-          className={styles.experienceTimeline}
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
+        </div>
+        <div className={styles.experienceTimeline}>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
     </div>
   );
 };

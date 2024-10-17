@@ -47,23 +47,25 @@ const Experience: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <motion.section
-      variants={textVariant(0.2)}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, amount: 0.25 }}
-      className={`${styles.experienceSection} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
-    >
-      <motion.div>
-        <p className={styles.sectionSubText}>{t('experience.title')}</p>
-        <h2 className={styles.sectionHeadText}>{t('experience.overview')}</h2>
-      </motion.div>
-      <div className={styles.experienceTimeline}>
-        {experiences.map((experience, index) => (
-          <ExperienceCard key={index} experience={experience} index={index} />
-        ))}
-      </div>
-    </motion.section>
+    <div className={styles.experienceWrapper}>
+      <motion.section
+        variants={textVariant(0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.25 }}
+        className={`${styles.experienceSection} max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`}
+      >
+        <motion.div>
+          <p className={styles.sectionSubText}>{t('experience.title')}</p>
+          <h2 className={styles.sectionHeadText}>{t('experience.overview')}</h2>
+        </motion.div>
+        <div className={styles.experienceTimeline}>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} index={index} />
+          ))}
+        </div>
+      </motion.section>
+    </div>
   );
 };
 
